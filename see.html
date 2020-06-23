@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>my website</title>
+</head>
+<body>
+    <ul>
+        
+         <li><a href="#" >home</a>  </li>
+       <li><a href="#">direction</a></li>
+      <li> <a href="#">contact me</a></li> 
+    </ul>
+      NUMBER :  <input type ="number" id="first" name="number" placeholder=" first number" required><br><br>
+      SECOND  : <input type ="number" id="second" name="second" placeholder=" second number" required><br><br>
+      <input type="submit" id="multiply" value="*">
+      <input type="submit" id="minus" value="-">
+      <input type="submit" id="divide" value="/">
+      <input type="submit" id="add" value="+"><br><br>
+    </form>
+    ANSWER : <input type ="number" id="answer" name="answer" placeholder="answers will appear here" required><br>
+    <style>
+        #first {
+background-color: floralwhite;
+text-align: center;
+color: black;
+margin-top: 1rem;
+padding-bottom: 10px;
+padding-top: 10px;
+justify-content: flex-end;
+        }
+        #second {
+background-color:floralwhite;
+text-align: center;
+color: black;
+margin-top: 1rem;
+padding-bottom: 10px;
+padding-top: 10px;
+justify-content: flex-end;
+        }
+        #answer {
+background-color: floralwhite;
+text-align: center;
+color: black;
+margin-top: 1rem;
+padding-bottom: 10px;
+padding-top: 10px;
+justify-content: flex-end;
+        }
+#submit{
+    background-color: darkolivegreen;
+    font-size: 20px;
+}
+a:link{
+    width: 50%;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+   justify-content: center;
+  background-color:black;
+  text-decoration: none;
+  font-size: 16px;
+  padding-right: 10px;
+}
+a:hover{
+    background-color: blanchedalmond;
+    font-size: 25px;
+    flex-direction: row;
+}
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#multiply').onclick =  function(){
+            let first = document.querySelector('#first').value * document.querySelector('#second').value;
+            document.querySelector('#answer').value = first * second;
+        document.querySelector('#first').value ='';
+        document.querySelector('#second').value ='';
+        }
+        })
+
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#minus').onclick = minus
+        })
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#divide').onclick = divide
+        })
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#add').onclick = add
+        })
+       
+        function minus (){
+            let first = document.querySelector('#first').value;
+            let second = document.querySelector('#second').value;
+            document.querySelector('#answer').value = first - second;
+        document.querySelector('#first').value ='';
+        document.querySelector('#second').value ='';
+        }
+        function divide (){
+            let first = document.querySelector('#first').value;
+            let second = document.querySelector('#second').value;
+            document.querySelector('#answer').value = first / second;
+        document.querySelector('#first').value ='';
+        document.querySelector('#second').value ='';
+        }
+        function add (){
+            let first = document.querySelector('#first').value;
+            let second = document.querySelector('#second').value;
+            document.querySelector('#answer').value = first + second;
+        document.querySelector('#first').value ='';
+        document.querySelector('#second').value ='';
+        }
+    </script>
+</body>
+</html>
